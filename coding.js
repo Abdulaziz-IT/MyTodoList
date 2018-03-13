@@ -1,8 +1,6 @@
 
 var newList = document.getElementById("new-item");
-var add = document.getElementById("add-btn");
 var list = document.getElementById("my-list");
-var deleteAll = document.getElementById("delete-all-btn");
 
 function addList() {
     var txt = document.createTextNode(newList.value);
@@ -23,7 +21,7 @@ function addCloseBtn(liElement) {
     span.onclick = function () {
         var liItem = this.parentElement;
         liItem.parentElement.removeChild(liItem);
-    }
+    };
     liElement.appendChild(span);
 }
 
@@ -38,7 +36,7 @@ function addCompleteBtn(liElement) {
             this.parentElement.className = "completed";
         else
             this.parentElement.classList.remove("completed");
-    }
+    };
     liElement.appendChild(span);
 }
 
